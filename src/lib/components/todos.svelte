@@ -1,6 +1,20 @@
 <script>
+  import { onDestroy, onMount } from "svelte";
   import { todos } from "../stores/todo.store";
   import Todo from "./todo.svelte";
+
+  onMount(() => {
+    const item = window.localStorage.getItem("todos");
+    if (!item) return;
+    const parsed = JSON.parse(item);
+    if (parsed.length) todos.set(parsed);
+  });
+
+  let unsubscribeStore = todos.subscribe((currentValue) => {
+    if (currentValue.length) window.localStorage.setItem("todos", JSON.stringify(currentValue));
+  });
+
+  onDestroy(() => unsubscribeStore());
 </script>
 
 {#if $todos.filter((todo) => !todo.done).length}

@@ -17,7 +17,11 @@ export const handleToggle = (id) => {
 };
 
 export const handleDelete = (id) => {
-  todos.update((todos) => todos.filter((todo) => Number(todo.id) != Number(id)));
+  todos.update((todos) => {
+    const newTodos = todos.filter((todo) => Number(todo.id) != Number(id));
+    if (!newTodos.length) window.localStorage.setItem("todos", []);
+    return newTodos;
+  });
 };
 
 export const updateTodo = (task, id) => {

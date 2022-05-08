@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-
   import { handleAddTodo } from "../stores/todo.store";
 
   let input = "";
@@ -11,9 +10,7 @@
     input = "";
   };
 
-  onMount(() => {
-    document.querySelector(".input").focus();
-  });
+  onMount(() => document.querySelector(".input").focus());
 </script>
 
 <div class="addTodo">

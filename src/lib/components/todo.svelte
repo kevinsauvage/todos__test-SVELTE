@@ -3,7 +3,6 @@
   import Close from "svelte-material-icons/Close.svelte";
   import Delete from "svelte-material-icons/Delete.svelte";
   import Pencil from "svelte-material-icons/Pencil.svelte";
-
   import { handleToggle, handleDelete, toUpdateTodo } from "../stores/todo.store";
 
   export let todo;
