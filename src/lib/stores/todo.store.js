@@ -12,15 +12,17 @@ export const handleAddTodo = (todo) => {
 
 export const handleToggle = (id) => {
   todos.update((todos) =>
-    todos.map((todo) => (todo.id === id ? { ...todo, done: !todo.done } : todo))
+    todos.map((todo) => (Number(todo.id) === Number(id) ? { ...todo, done: !todo.done } : todo))
   );
 };
 
 export const handleDelete = (id) => {
-  todos.update((todos) => todos.filter((todo) => todo.id != id));
+  todos.update((todos) => todos.filter((todo) => Number(todo.id) != Number(id)));
 };
 
 export const updateTodo = (task, id) => {
-  todos.update((todos) => todos.map((todo) => (todo.id === id ? { ...todo, task } : todo)));
+  todos.update((todos) =>
+    todos.map((todo) => (Number(todo.id) === Number(id) ? { ...todo, task } : todo))
+  );
   toUpdateTodo.update(() => "");
 };
