@@ -1,32 +1,16 @@
 <script>
-  import { toUpdateTodo } from "./lib/stores/todo.store.js";
+  import Page from "./lib/layout/page.svelte";
   import Todos from "./lib/components/todos.svelte";
   import AddTodo from "./lib/components/addTodo.svelte";
-  import Container from "./lib/layout/container.svelte";
   import Update from "./lib/components/update.svelte";
+
+  import { toUpdateTodo } from "./lib/stores/todo.store.js";
 </script>
 
-<main>
-  <header class="header">
-    <h1>SVELTE TODO APP</h1>
-  </header>
-  <Container>
-    <AddTodo />
-    <Todos />
-    {#if $toUpdateTodo.id}
-      <Update />
-    {/if}
-  </Container>
-</main>
-
-<style>
-  .header {
-    background-color: #072227;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    color: #4fbdba;
-  }
-</style>
+<Page>
+  <AddTodo />
+  <Todos />
+  {#if $toUpdateTodo.id}
+    <Update />
+  {/if}
+</Page>

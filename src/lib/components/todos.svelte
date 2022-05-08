@@ -26,7 +26,7 @@
     width: 100%;
     background-color: white;
     border-radius: 8px;
-    margin-top: 20px;
+    margin: 20px 0;
     overflow: hidden;
   }
 

@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   background-color: #35858b;
+  position: relative;
 }
