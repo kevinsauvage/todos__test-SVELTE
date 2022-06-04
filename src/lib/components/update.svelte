@@ -1,6 +1,5 @@
 <script>
   import { toUpdateTodo, updateTodo } from "./../stores/todo.store.js";
-
   let newTask = $toUpdateTodo.task;
 </script>
 

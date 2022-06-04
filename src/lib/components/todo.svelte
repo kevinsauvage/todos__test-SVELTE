@@ -4,10 +4,7 @@
   import Delete from "svelte-material-icons/Delete.svelte";
   import Pencil from "svelte-material-icons/Pencil.svelte";
   import { handleToggle, handleDelete, toUpdateTodo } from "../stores/todo.store";
-
   export let todo;
-
-  const handleUpdate = () => toUpdateTodo.update(() => todo);
 </script>
 
 <li class={`item ${todo.done ? "item-done" : "item-pending"}`}>
@@ -20,7 +17,7 @@
         <Check size="30" />
       {/if}
     </div>
-    <div on:click={handleUpdate}>
+    <div on:click={() => toUpdateTodo.update(() => todo)}>
       <Pencil size="30" />
     </div>
     <div on:click={() => handleDelete(todo.id)}>
@@ -37,6 +34,8 @@
     border-bottom: 1px solid gainsboro;
     padding: 4px 10px;
     font-size: 18px;
+    margin-bottom: 5px;
+    background-color: white;
   }
 
   .item:last-child {

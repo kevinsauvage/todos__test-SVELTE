@@ -9,6 +9,7 @@
     margin-top: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 40px;
     background-color: #072227;
     color: #aefeff;
