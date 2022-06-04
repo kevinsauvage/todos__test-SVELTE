@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "sirv-cli": "^2.0.0",
-    "svelte-material-icons": "^2.0.2"
+    "svelte-material-icons": "^2.0.2",
+    "uuid": "^8.3.2"
   }
 }
