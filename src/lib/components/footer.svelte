@@ -10,8 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
-    background-color: #072227;
-    color: #aefeff;
+    padding: 10px;
+    background-color: #6272a4;
+    color: #f8f8f2;
   }
 </style>

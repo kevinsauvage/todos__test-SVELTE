@@ -12,16 +12,16 @@
   <div class="icons">
     <div on:click={() => handleToggle(todo.id)}>
       {#if todo.done}
-        <Close size="30" />
+        <Close size="30" color="#f89580" />
       {:else}
-        <Check size="30" />
+        <Check size="30" color="#8aff80" />
       {/if}
     </div>
     <div on:click={() => toUpdateTodo.update(() => todo)}>
-      <Pencil size="30" />
+      <Pencil size="30" color="#79cbdc" />
     </div>
     <div on:click={() => handleDelete(todo.id)}>
-      <Delete size="30" />
+      <Delete size="30" color="#ff5555" />
     </div>
   </div>
 </li>
@@ -31,15 +31,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid gainsboro;
     padding: 4px 10px;
     font-size: 18px;
-    margin-bottom: 5px;
-    background-color: white;
-  }
-
-  .item:last-child {
-    border-bottom: none;
+    margin: 3px 0;
+    background-color: #44475a;
+    border: 0.1px solid #f8f8f2;
+    color: #f8f8f2;
   }
 
   .icons {
@@ -50,7 +47,7 @@
   }
 
   .icons > div:hover {
-    color: #aefeff;
+    transform: scale(1.1);
   }
 
   .item-done {

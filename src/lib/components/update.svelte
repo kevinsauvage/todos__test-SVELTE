@@ -3,7 +3,7 @@
   let newTask = $toUpdateTodo.task;
 </script>
 
-<div class="modal">
+<div class="modal" on:click|self={() => toUpdateTodo.update(() => "")}>
   <label for="updateInput" class="label">
     <span class="close" on:click={() => toUpdateTodo.update(() => "")}> X </span>
     Update todo
@@ -32,7 +32,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
     padding: 40px 60px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: 500;
     font-size: 16px;
     position: relative;

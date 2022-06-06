@@ -23,21 +23,22 @@
       on:keypress={(e) => e.key === "Enter" && handleAdd()}
     />
   </label>
-  <button class="button" type="button" on:click={handleAdd}> ADD TODO </button>
+  <button class="button" type="button" on:click={handleAdd}> ADD </button>
 </div>
 
 <style>
   .addTodo {
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
-    padding: 10px;
-    width: auto;
+    border-radius: 6px;
+    padding: 4px;
     height: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
     border: 1px solid #072227;
+    max-width: 500px;
+    width: 100%;
   }
 
   .label {
@@ -50,7 +51,7 @@
     height: 100%;
     padding-left: 10px;
     border-radius: 3px;
-    border: 2px solid #072227;
+    border: 1px solid #072227;
   }
 
   .input:focus {
@@ -58,13 +59,13 @@
   }
 
   .button {
-    width: 130px;
+    width: 200px;
     padding: 10px;
     cursor: pointer;
-    background-color: #aefeff;
+    background-color: #8aff80;
     color: #072227;
     font-weight: 600;
     border-radius: 3px;
-    border: 2px solid #072227;
+    border: 1px solid #072227;
   }
 </style>
